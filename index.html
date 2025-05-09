@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lama Happy Works</title>
+  <title>Lama Happy - Travaux</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -13,37 +13,50 @@
   </header>
 
   <main>
-    <h1>Works</h1>
+    <h1>Travaux</h1>
 
     <nav class="filters">
-      <button class="active">All</button>
-      <button>Commercial</button>
-      <button>Residential</button>
+      <button class="active">Travaux</button>
+      <button>Contact</button>
+      <button>Montage vidéo</button>
     </nav>
 
     <section class="gallery">
-      <div class="card">
-        <img src="image1.jpg" alt="Projet 1">
+      <div class="card" onclick="openLightbox('video1.mp4')">
+        <img src="thumb1.jpg" alt="Miniature 1">
         <div class="info">
-          <span>Dunoon Road</span>
+          <span>Montage 1</span>
           <a href="#">→</a>
         </div>
       </div>
-      <div class="card">
-        <img src="image2.jpg" alt="Projet 2">
+      <div class="card" onclick="openLightbox('video2.mp4')">
+        <img src="thumb2.jpg" alt="Miniature 2">
         <div class="info">
-          <span>Kingscliffe Gardens</span>
-          <a href="#">→</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="image3.jpg" alt="Projet 3">
-        <div class="info">
-          <span>Boxy Loft</span>
+          <span>Montage 2</span>
           <a href="#">→</a>
         </div>
       </div>
     </section>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <video id="lightboxVideo" controls></video>
+    </div>
   </main>
+
+  <script>
+    function openLightbox(videoSrc) {
+      const lightbox = document.getElementById("lightbox");
+      const video = document.getElementById("lightboxVideo");
+      video.src = videoSrc;
+      lightbox.style.display = "flex";
+    }
+    function closeLightbox() {
+      const lightbox = document.getElementById("lightbox");
+      const video = document.getElementById("lightboxVideo");
+      lightbox.style.display = "none";
+      video.pause();
+      video.currentTime = 0;
+    }
+  </script>
 </body>
 </html>
