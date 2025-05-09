@@ -1,49 +1,49 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Lama Happy</title>
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #f0f0f0;
-      font-family: Arial, sans-serif;
-    }
-
-    .bento-container {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
-      grid-gap: 20px;
-      justify-items: center;
-      align-items: center;
-      width: 100%;
-      height: 100%;
-    }
-
-    .case {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 500px;
-      height: 300px;
-      background-color: #4CAF50;
-      color: white;
-      font-size: 36px;
-      font-weight: bold;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lama Happy Works</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="bento-container">
-    <div class="case">Lama Happy</div>
-  </div>
+  <header>
+    <div class="logo">L<br>A<br>M<br>A</div>
+    <div class="menu-icon">☰</div>
+  </header>
+
+  <main>
+    <h1>Works</h1>
+
+    <nav class="filters">
+      <button class="active">All</button>
+      <button>Commercial</button>
+      <button>Residential</button>
+    </nav>
+
+    <section class="gallery">
+      <div class="card">
+        <img src="image1.jpg" alt="Projet 1">
+        <div class="info">
+          <span>Dunoon Road</span>
+          <a href="#">→</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image2.jpg" alt="Projet 2">
+        <div class="info">
+          <span>Kingscliffe Gardens</span>
+          <a href="#">→</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image3.jpg" alt="Projet 3">
+        <div class="info">
+          <span>Boxy Loft</span>
+          <a href="#">→</a>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
