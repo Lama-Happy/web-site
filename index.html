@@ -1,62 +1,8 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lama Happy - Travaux</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <div class="logo">L<br>A<br>M<br>A</div>
-    <div class="menu-icon">☰</div>
-  </header>
-
-  <main>
-    <h1>Travaux</h1>
-
-    <nav class="filters">
-      <button class="active">Travaux</button>
-      <button>Contact</button>
-      <button>Montage vidéo</button>
-    </nav>
-
-    <section class="gallery">
-      <div class="card" onclick="openLightbox('video1.mp4')">
-        <img src="thumb1.jpg" alt="Miniature 1">
-        <div class="info">
-          <span>Montage 1</span>
-          <a href="#">→</a>
-        </div>
-      </div>
-      <div class="card" onclick="openLightbox('video2.mp4')">
-        <img src="thumb2.jpg" alt="Miniature 2">
-        <div class="info">
-          <span>Montage 2</span>
-          <a href="#">→</a>
-        </div>
-      </div>
-    </section>
-
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-      <video id="lightboxVideo" controls></video>
-    </div>
-  </main>
-
-  <script>
-    function openLightbox(videoSrc) {
-      const lightbox = document.getElementById("lightbox");
-      const video = document.getElementById("lightboxVideo");
-      video.src = videoSrc;
-      lightbox.style.display = "flex";
-    }
-    function closeLightbox() {
-      const lightbox = document.getElementById("lightbox");
-      const video = document.getElementById("lightboxVideo");
-      lightbox.style.display = "none";
-      video.pause();
-      video.currentTime = 0;
-    }
-  </script>
-</body>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; URL='portfolio.html'" />
+  </head>
+  <body>
+  </body>
 </html>
